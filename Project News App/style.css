@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #183b56;
+    --secondery-color: #577592;
+    --new-color: #2294ed;
+    --new-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+}
+
+body {
+    background-color: rgb(235, 230, 223);
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    background-color: #dbe9f3;
+    box-shadow: 0 0 4px #abc9e4;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    right: 0;
+    left: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--secondery-color);
+    overflow: hidden;
+}
+
+.navigation {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+
+.logo img {
+    width: 180px;
+}
+
+.list {
+    gap: 10px;
+}
+
+.list-hover:hover {
+    cursor: pointer;
+    color: var(--secondery-color);
+}
+
+.list-hover:active {
+    color: red;
+}
+
+.list-hover.active {
+    color: var(--new-color);
+}
+
+.input {
+    height: 32px;
+    gap: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+.input-search {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 5px;
+    border: 2px solid #bbd0e2;
+}
+
+.search-button {
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 4px var(--secondery-color);
+    background-color: var(--new-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.search-button:hover {
+    background-color: var(--new-color-dark);
+}
+
+main {
+    margin-top: 80px;
+    padding-block: 20px;
+}
+
+.box-container {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.box {
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+
+.header-box img {
+    object-fit: cover;
+    width: 100%;
+    height: 180px;
+}
+
+.box-data {
+    padding: 18px;
+}
+
+.news-date {
+    margin-block: 12px;
+}
+
+@media screen and (max-width:768px) {
+    .list-hover {
+        display: none;
+    }
+
+    .navigation {
+        justify-content: space-between;
+    }
+
+    .input-search {
+        width: 100px;
+        padding-inline: 8px;
+    }
+
+    .search-button {
+        padding: 8px 12px;
+    }
+}

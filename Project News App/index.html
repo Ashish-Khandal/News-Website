@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/Images/iconTransprent.png" type="" />
+  </head>
+  <body>
+    <nav>
+      <div class="navigation container flex">
+        <div class="logo">
+          <a href="#" onclick="reload()"
+            ><img src="/Images/logo5.png" alt="Loading..."
+          /></a>
+        </div>
+        <div class="ul-list">
+          <ul class="list flex">
+            <li class="list-hover" id="sport" onclick="onNavItemClick('sport')">
+              Sports
+            </li>
+            <li class="list-hover" id="ipl" onclick="onNavItemClick('ipl')">
+              Ipl
+            </li>
+            <li
+              class="list-hover"
+              id="finance"
+              onclick="onNavItemClick('finance')"
+            >
+              Finance
+            </li>
+            <li
+              class="list-hover"
+              id="Indian-politics"
+              onclick="onNavItemClick('Indian-politics')"
+            >
+              Politics
+            </li>
+            <li
+              class="list-hover"
+              id="technology"
+              onclick="onNavItemClick('technology')"
+            >
+              Technology
+            </li>
+          </ul>
+        </div>
+        <div class="input flex">
+          <input
+            class="input-search"
+            type="text"
+            id="input-search"
+            placeholder="e.g. Cricket"
+          />
+          <button id="search-button" class="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="box-container container flex" id="box-container"></div>
+    </main>
+    <template id="template-news-box">
+      <div class="box">
+        <div class="header-box">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="news-image"
+            id="news-image"
+          />
+        </div>
+        <div class="box-data">
+          <h3 class="news-title" id="news-title">This is a box-data.</h3>
+          <h6 class="news-date" id="news-date">date:-17-07-2023</h6>
+          <p class="news-para" id="news-para">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum,
+            culpa! Blanditiis debitis ipsa ullam voluptatibus eius iure
+            repellendus fugiat sed! Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Eos, possimus.
+          </p>
+        </div>
+      </div>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
